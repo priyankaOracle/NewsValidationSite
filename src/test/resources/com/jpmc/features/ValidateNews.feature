@@ -17,4 +17,3 @@ Feature: Build News Validation Site to prevent fake news
 	    Given News Validation Site is open
 	    And Attempt to read news at invalid index
 	    Then NewsValidationInvalidNewsIndexException should be thrown
-      

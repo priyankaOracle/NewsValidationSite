@@ -12,7 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import com.jpmc.exceptions.NewsValidationInvalidNewsIndexException;
 import com.jpmc.utilities.Wait;
 
@@ -64,7 +63,6 @@ public class NewsPage {
 		Wait.untilElementIsVisible(webDriver, yesIAmHappy, Duration.ofSeconds(3), "acceptCookie");
 		yesIAmHappy.click();
 		log.debug("---The cookie popup on Guardian News site is now handled---");
-
 	}
 
 }

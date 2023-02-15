@@ -10,6 +10,7 @@ import org.testng.Assert;
 import com.jpmc.entities.SearchResult;
 import com.jpmc.enums.Context;
 import com.jpmc.exceptions.NewsValidationInvalidNewsIndexException;
+
 import com.jpmc.managers.ConfigManager;
 import com.jpmc.pageobjects.GooglePage;
 import com.jpmc.pageobjects.NewsPage;
