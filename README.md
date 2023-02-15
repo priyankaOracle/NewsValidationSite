@@ -11,7 +11,8 @@ In order to achive this goal, the test scenarios are performing the below steps:
 4. Open Google.com
 5. Search for the sanitized headline string (from step 3)
 6. Match the Google search results (only first page for now) with the sanitized headline string with pre-defined accuracy(Accuracy percent can be configured).
-7. Verify minimum required articles are found in the search results (minimum required articles can be configured) 
+7. Verify minimum required articles are found in the search results (minimum required articles can be configured)   
+NOTE : Accuracy is a configurable parameter (Refer scenario example in the feature file). This parameter defines how much matching percentage is required between the news headline(source) and searched articles on google (target) in order to qualify the article on internet (google) as "similar" to the source headline.
 
 
 **Tech Stack**  
@@ -30,6 +31,9 @@ browser : This parameter defines the browser to be used for testing. (See suppor
 executionmode : This parameter can take two values:  
   local: This is a developer mode in which the framework will open browser and all UI actions will be visible.  
   pipeline: This is CI/CD or pipeline mode in which the framework will run in 'headless' fashion.  
+  
+This frameworks also supports screenshots on  success and failure scenarios. The report location can be found at :
+  <root>/main/target/cucumber-reports/advanced-reports/cucumber-html-reports
 
 **Support Matrix**  
 News Website URLs: https://www.theguardian.com/tone/news  
