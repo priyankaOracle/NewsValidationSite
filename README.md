@@ -2,6 +2,17 @@
 This is a UI automation framework based on Selenium WebDriver (from Selenium 4) and JAVA (JDK 8) integrated with Cucumber and TestNG.
 It has been developed to validate the news article authenticity on a news website by searching the newes headline keywords on a search engine and verify the presence of other similar articles over the internet.
 
+**Understanding of the problem**  
+According to the problem statement, the eventual goal of this framework is to determine whether a news article (currenlty on www.guardian.com) is real or fake by searching for similar article of other search platforms (currently Google).
+In order to achive this goal, the test scenarios are performing the below steps:  
+1. Open the Guardian new page.  
+2. Read the text of the first news article (index of the news article is configurable)
+3. Sanitize the captured headline string (Sanitize means remooving unwanted words which does not change the meaning of the sentence)
+4. Open Google.com
+5. Search for the sanitized headline string (from step 3)
+6. Match the Google search results (only first page for now) with the sanitized headline string with pre-defined accuracy(Accuracy percent can be configured).
+7. Verify minimum required articles are found in the search results (minimum required articles can be configured) 
+
 
 **Tech Stack**  
 Languages: Java, Gherkin  
@@ -32,6 +43,9 @@ Tests can be run in two ways:
   2. IDE:   
     i) Import the project in an IDE as a maven project  
          ii) Right click on the Test Runner file present under <root>/src/test/java/com/jpmc/runners/TestRunner.java and Run as TestNG  
+           
+**Logging** 
+This framework is powered by the Log4j2 logging capabilities. The logging is configured to append the logs both on console and in a file. The log file can be found at <root>/application.log  
 
 **Details of automated scenarios**  
 I have used the capability of Cucumber 'Examples' to automate multiple scenarios with different inputs in one single scenario outline. Below is the template of the scenario outline:  
